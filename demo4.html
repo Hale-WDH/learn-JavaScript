@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>周几查询</title>
+</head>
+<body>
+    <script>
+		//补充代码
+		var week=new Date().getDay();
+		var weekstr="";
+		console.log(week);
+		switch(week){
+			case 0:weekstr="日"
+            break;
+		    case 1:weekstr="一"
+	        break;
+	        case 2:weekstr="二"
+            break;
+            case 3:weekstr="三"
+            break;
+            case 4:weekstr="四"
+            break;
+            case 5:weekstr="五"
+            break;
+            default:weekstr="六"
+		}
+		document.write("今天是星期"+weekstr);
+	</script>
+</body>
+</html>
