@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<script>
+	var colors=new Array('red','green');
+	//push(向原数组末尾顺序添加元素)
+	//colors.push('blue','yellow','blank');    
+	var len=colors.push('blue','yellow','blank');
+	console.log(colors);
+	console.log(len);
+
+	//unshift(向原数组开头顺序添加元素)
+	var nums=[2,7,8,6];
+	nums.unshift(99,66);
+	console.log(nums);
+
+	//pop（删除数组最后一个元素)
+	nums.pop();
+	console.log(nums);
+	console.log(nums.pop());
+
+    //shift（删除数组第一个元素)
+    colors.shift();
+    console.log(colors);
+    console.log(colors.shift());
+</script>
+</body>
+</html>

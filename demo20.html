@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title>猜数字</title>
+</head>
+<body>
+<script>
+    do{
+        var aaa=prompt("请输入 您要输入的数字")
+        while(isNaN(aaa)){
+            alert("必须输入数字哦!");
+            break;
+        }
+        while(aaa>5){
+            alert("猜大了");
+            break;
+        }
+        while(aaa<5){
+            alert("猜小了");
+            break;
+        } 
+        while(aaa==5){
+            alert("猜对了");
+            break;
+        }
+    }while(aaa!=5);
+</script>
+</body>
+</html>
