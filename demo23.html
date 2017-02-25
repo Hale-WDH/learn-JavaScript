@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>join</title>
+</head>
+<body>
+<script>
+	//join
+	var nums=[2,4,6];
+	var str=nums.join("-");
+	//document.write(str);   //2-4-6
+
+	var words=["border","left","color"];
+	var wordstr=words.join("");
+	//document.write(wordstr);
+
+	//reverse
+	nums.reverse();
+	//document.write(nums);
+	
+	var strs=["a","b","c","d"];
+	var newstrs=strs.reverse().join("");
+	//document.write(newstrs);//返回dcba这个字符串
+
+	var arr=[15,23,99,88,12];
+	//降序
+	//arr.sort(function(a,b){return b-a});
+	//升序
+	arr.sort(function(a,b){return a-b});
+	document.write(arr);
+</script>
+</body>
+</html>
