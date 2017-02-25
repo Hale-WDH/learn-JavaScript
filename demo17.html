@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>arguments</title>
+</head>
+<body>
+<script>
+	function inner(){
+		//arguments
+		console.log(arguments.length);
+		console.log(arguments[2]);//索引是从0开始的正整数
+	}
+	//inner(10,20,45,66,2);
+	function add(num1,num2){
+		arguments[0]=99;
+		console.log(num1);   //现在得到99，严格模式下值不能通过下标方式来改变，为33
+	}
+	add(33,55);
+</script>
+</body>
+</html>
