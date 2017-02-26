@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>concat</title>
+</head>
+<body>
+<script>
+	//concat()
+	var arr1=['a','b','c','d'];
+	var arr2=['e','f',1,2];
+	var arr3=arr2.concat(arr1,[3,4,5]);
+	//document.write(arr3);//e,f,1,2,a,b,c,d,3,4,5
+
+	//slice()
+	/*var arr4=arr3.slice(3);
+	document.write(arr4);//2,a,b,c,d,3,4,5 */
+
+	/*var arr4=arr3.slice(4,6);
+	document.write(arr4);//a,b  */
+
+	/*var arr4=[1,2,3,4,5];
+	var arr5=arr4.slice(-3,4);
+	document.write(arr5);//3,4  */
+
+	//完成以下代码，实现b数组a数组的拷贝，方法越多越好
+	var a=[1,'yes',3],
+	    b;
+    //方法1：数组遍历，push
+    /*b=[];
+    for(var i=0;i<a.length;i++){
+    	b.push(a[i]);
+    }  */
+    //方法2：concat
+    /*b=[].concat(a);  */
+    //方法3：slice
+    b=a.slice();
+    document.write(b);
+</script>
+</body>
+</html>
