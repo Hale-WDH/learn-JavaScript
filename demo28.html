@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<script>
+	var str='hello world';
+	/*  //charAt
+	console.log(str.charAt(1));//e
+	console.log(str.charAt(15));//返回空值
+	//charCodeAt
+	console.log(str.charCodeAt(2));//108
+	console.log(str.charCodeAt(5));//32
+	console.log(str.charCodeAt(15));//NaN
+	//indexOf
+	console.log(str.indexOf("w"));//6
+	//lastIndexOf
+	console.log(str.lastIndexOf('l'));//9  */
+
+	//截取orl
+	//slice
+	console.log(str.slice(7,10));//orl
+	console.log(str.slice(2));//llo world
+	console.log(str.slice(-3));//rld
+	console.log(str.slice(-7,-4));//o w
+	//substring
+	console.log(str.substring(-7,5));//等价于console.log(str.slice(0,5));
+	console.log(str.substring(2,-5));//等价于console.log(str.slice(0,2));
+	//substr
+	console.log(str.substr(7,3));//等价于console.log(str.slice(7,10));
+	console.log(str.substr(-5,4));//等价于console.log(str.slice(-5,10));
+	console.log(str.substr(3,-4));//什么都没有，因为截取的数量为空；
+</script>
+</body>
+</html>
