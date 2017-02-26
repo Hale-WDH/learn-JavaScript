@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title> </title>
+</head>
+<body>
+<script>
+    var email=prompt("请输入登入邮箱");
+    var pos=email.indexOf('@');
+    var emailName=email.slice(0,pos);
+    var fileName=email.slice(pos+1);
+    document.write("邮箱的用户名是："+emailName);
+    document.write('<br>');
+    document.write('登入的邮箱域名是：'+fileName+'邮箱');
+</script>
+</body>
+</html>

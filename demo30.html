@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<script>
+	var str='welcome-to-beijing';
+	//使用split将str转换为数组
+	var arr=str.split('-');
+	var date='2016/05/05';
+	console.log(arr);//["welcome", "to", "beijing"]
+	var newdate=date.split("/");
+	console.log(newdate);//["2016", "05", "05"]
+	//替换
+	var tel='010-62791268,400-100-9098,010-8678889';
+	var newtel=tel.replace(','," ");
+	console.log(newtel);//010-62791268 400-100-9098,010-8678889
+</script>
+</body>
+</html>
