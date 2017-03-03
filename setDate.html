@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<script>
+/*    //第一种方法：
+	//创建一个日期的时间对象
+	var today=new Date();
+	var weeks=['日','一','二','三','四','五','六'];
+	console.log("今天是："+today.getFullYear()+"-"+(today.getMonth()+1)+"-"+today.getDate()+"-"+"星期"+weeks[today.getDay()]);
+	today.setDate(today.getDate()+2);
+	console.log("2天之后的今天是："+today.getFullYear()+"-"+(today.getMonth()+1)+"-"+today.getDate()+"-"+"星期"+weeks[today.getDay()]);*/
+
+
+	//第二种方法：
+	var today=new Date();
+	var weeks=['日','一','二','三','四','五','六'];
+	console.log("今天是："+today.getFullYear()+"-"+(today.getMonth()+1)+"-"+today.getDate()+"-"+"星期"+weeks[today.getDay()]);
+	var year=today.getFullYear();
+	var month=today.getMonth();
+	var day=today.getDate();
+	//创建了一个目标日期对象
+	var temp=new Date(year,month,day+2);
+	console.log("2天之后的今天是："+temp.getFullYear()+"-"+(temp.getMonth()+1)+"-"+temp.getDate()+"-"+"星期"+weeks[temp.getDay()]);
+</script>
+</body>
+</html>
