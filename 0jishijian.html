@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>0jishijian</title>
+<style>
+	.lock {width:140px;background:#00f;height:30px;line-height: 30px;color: #fff;
+		font-size: 14px;text-align:center;border-radius:5px;cursor:pointer;margin-top:30px; }
+	.unlock {width:140px;background:#666;height:30px;line-height: 30px;color: #ccc;
+		font-size: 14px;text-align:center;border-radius:5px;cursor:pointer;margin-top:30px; }
+</style>
+</head>
+<body>
+<!-- 鼠标滑过按钮时调用mouseoverFn的函数 -->
+<div class="lock" id="btn">锁定</div>
+<script>
+	//获取按钮
+	var btn=document.getElementById("btn");
+	//给按钮绑定事件，this是对该DOM元素的引用
+	btn.onclick=function(){
+	//判断如果按钮为锁定，则显示为解读，变为灰色，否则显示为锁定，变为蓝色
+		/*if(this.className=="lock"){
+			this.className="unlock";
+			this.innerHTML="解锁";
+		}else{
+			this.className="lock";
+			this.innerHTML="锁定";
+	    }*/
+
+	    if(this.innerHTML=="锁定"){
+	    	this.className="unlock";
+	    	this.innerHTML="解锁";
+	    }else{
+	    	this.className="lock";
+	    	this.innerHTML="锁定";
+	    }
+	}
+</script>
+</body>
+</html>
