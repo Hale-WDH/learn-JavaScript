@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.text span{font-weight: bold;color:#f00;}
+		em{font-style: normal;}
+	</style>
+</head>
+<body>
+	<div>
+		<p class="text">您还可以输入<span><em id="count">30</em>/30</span>字</p>
+		<div class="input">
+			<textarea name="" id="text" cols="70" rows="3"></textarea>
+		</div>
+	</div>
+	<script>
+/*		//在事件触发的function里，用一个参数接收事件对象
+		document.onkeydown=function(event){
+			console.log(event.keyCode);
+		}
+		document.onkeyup=function(event){
+			console.log(event.keyCode);
+		}*/
+
+		//绑定键盘事件
+		var text=document.getElementById("text");
+		var count=document.getElementById("count");
+		document.onkeyup=function(){
+		//获取文本框的长度
+		var len=text.value.length;
+		var allow=30-len;
+		count.innerHTML=allow;
+		}
+	</script>
+</body>
+</html>
