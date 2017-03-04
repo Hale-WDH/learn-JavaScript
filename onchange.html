@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script>
+	//页面加载
+	window.onload=function (){
+		//获取下拉菜单
+		var menu=document.getElementById("menu");
+		//给菜单绑定change事件,一般作用于select或checkbox或radio
+		menu.onchange=function(){
+			//获取当前选中的值
+			var bgcolor=this.value;
+			//设置body的背景色
+			document.body.style.background=bgcolor;
+		}
+	}
+</script>
+</head>
+<body>
+<div class="box">
+	请选择您喜欢的颜色：
+	<!-- <select name="" id="menu"> -->
+	<select name="" id="menu">
+		<option value="#fff">请选择</option>
+		<option value="#f00">红色</option>
+		<option value="#0f0">绿色</option>
+		<option value="#00f">蓝色</option>
+		<option value="#ff0">黄色</option>
+		<option value="#ccc">灰色</option>
+	</select>
+</div>
+</body>
+</html>
