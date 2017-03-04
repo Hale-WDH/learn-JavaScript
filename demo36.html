@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+	.quan{width:50px;height:30px;line-height: 30px;border:1px solid black;text-align: center;background:#eee;}
+	.fan {width:50px;height:30px;line-height: 30px;border:1px solid black;text-align: center;background:#eee;}
+</style>
+</head>
+<body>
+<div class="quan" id="btn">全选</div>
+<script>
+	//获取按钮
+	var btn=document.getElementById("btn");
+	//给鼠标绑定事件，This是对该DOM事件的引用
+	btn.onclick=function(){
+	//如果按钮为全选，则显示为反选，否则显示为全选
+		/*if(this.className=="quan"){
+			this.className="fan";
+			this.innerHTML="反选";
+		}else{
+			this.className="quan";
+			this.innerHTML="全选";
+	    }*/
+
+	    if(this.innerHTML=="全选"){
+	    	this.className="fan";
+	    	this.innerHTML="反选";
+	    }else{
+	    	this.className="quan";
+	    	this.innerHTML="全选";
+	    }
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+	.box{padding:50px;}
+	.left,.tips{float:left;}
+	.left{margin-right:10px;}
+	.tips{display:none;font-size: 16px;}
+</style>
+<script>
+	window.onload=function(){
+		//获取文本框和提示框
+		var phone=document.getElementById("phone"),
+			tip=document.getElementById("tip");
+		//给文本框绑定激活事件
+		phone.onfocus=function(){
+			//让tip显示出来
+			tip.style.display="block";
+		}
+		//给文本框绑定失去焦点的事件
+		phone.onblur=function(){
+			//获取文本框的值
+			var phoneVal=this.value;
+			//判断手机号码是否是11位的数字
+			//如果输入正确，则显示OK，否则显示error
+			if(phoneVal.length==11 && isNaN(phoneVal)==false){
+				tip.innerHTML="ok";
+			}else{
+				tip.innerHTML="error";
+			}
+		}
+	}
+</script>
+</head>
+<body>
+<div class="box">
+	<div class="left">
+		<input type="text" id="phone" placeholder="请输入手机号码">
+	</div>
+	<div class="tips" id="tip">
+		请输入有效的手机号码
+	</div>
+</div>
+</body>
+</html>
