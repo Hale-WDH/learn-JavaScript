@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/*var intervalId=setInterval(function(){
+			console.log("您好");
+		},1000)
+		//10秒之后停止打印
+		setTimeout(function(){
+			clearInterval(intervalId);
+		},5000)*/
+
+		/*var num=1,
+			max=5,
+			timer=null;
+		//每隔一秒num递增一次，知道num的值等于max清除
+		timer=setInterval(function(){
+			console.log(num);
+			num++;
+			if(num>max){
+				clearInterval(timer);
+			}
+		},1000)*/
+
+		//使用超时调用实现
+		var num=1,
+			max=5,
+			timer=null;
+		function inCreamentNum(){
+			console.log(num);
+			num++;
+			if(num<=max){
+				timer=setTimeout(inCreamentNum,100);
+			}else{
+				clearTimeout(timer);
+			}
+		}
+		timer=setTimeout(inCreamentNum,3000)
+	</script>
+</body>
+</html>
