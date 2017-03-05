@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		//检测浏览器类型
+		function getBrowser(){
+			var explorer=navigator.userAgent.toLowerCase(),browser;
+			if(explorer.indexOf("msie")>-1){
+				browser="IE";
+			}else if(explorer.indexOf("chrome")>-1){
+				browser="Chrome";
+			}else if(explorer.indexOf("opera")>-1){
+				browser="Opera";
+			}else if(explorer.indexOf("safari")>-1){
+				browser="safari";
+			}
+			return browser;
+		}
+		var explorer=getBrowser();
+		console.log("您当前使用的是："+explorer+"浏览器");
+	</script>
+</body>
+</html>

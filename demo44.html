@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>userAgent</title>
+</head>
+<body>
+   <input type="button" value="点击获取浏览器信息" id="browser"/>
+   <script type="text/javascript">
+            //检测浏览器类型
+        function getBrowser(){
+            var explorer=navigator.userAgent.toLowerCase(),browser;
+            if(explorer.indexOf("msie")>-1){
+                browser="IE";
+            }else if(explorer.indexOf("chrome")>-1){
+                browser="Chrome";
+            }else if(explorer.indexOf("opera")>-1){
+                browser="Opera";
+            }else if(explorer.indexOf("safari")>-1){
+                browser="safari";
+            }
+            return browser;
+        }
+        var explorer=getBrowser();
+        var browser=document.getElementById("browser");
+        browser.onclick=function(){
+            alert("您当前使用的是："+explorer+"浏览器");
+        }
+   </script>
+</body>
+</html>

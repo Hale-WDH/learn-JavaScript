@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript" language="javascript"> 
+	var rain = 1; //定义全局变量 rain 
+	function check(){ 
+	var rain = 100; //定义局部变量rain 
+	alert( rain ); //这里会弹出 100 
+	} 
+	alert( rain ); //这里会弹出1 
+	check(); 
+	alert( rain ); //这里会弹出1 
+	</script> 
+</body>
+</html>
