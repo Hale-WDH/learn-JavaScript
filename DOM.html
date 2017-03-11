@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件流</title>
+</head>
+<body>
+	<div id="box">
+		<input type="buttpn" value="按钮" id="btn1" onclick="showMessage()">
+		<input type="button" value="按钮2" id="btn2">
+		<input type="button" value="按钮3" id="btn3">
+	</div>
+	<script>
+		//HTML事件
+		function showMessage(){
+			alert("hello world");
+		}
+
+
+		//DOM0级事件
+		var btn2=document.getElementById('btn2');
+		btn2.onclick=function(){
+			alert('这是通过DOM0级添加的事件');
+		}
+		btn2.onclick=null //DMO0级取消事件
+
+
+		//DOM2级事件
+		var btn3=document.getElementById('btn3');
+		btn3.addEventListener('click',showMessage,false);
+		//DOM2级取消事件
+		btn3.removeEventListener('click',showMessage,false);
+	</script>
+</body>
+</html>
