@@ -1,0 +1,90 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+ul{		
+	list-style: none;
+}
+
+body{
+	font-family:"微软雅黑";
+	/*color: #666;
+	font-size: 22px;*/
+}
+
+.main{
+	width:1200px;
+	height:540px;
+	margin:30px auto;
+	overflow:hidden;
+	cursor:pointer;
+	
+}
+
+.banner{
+	width:1200px;
+	height:460px;
+
+}
+
+.banner-slide{
+	width:1200px;
+	height:460px;
+	background-repeat:no-repeat;
+	display:none;
+}
+
+.slide-active{
+	display:block;
+}
+
+/*背景图*/
+
+.slide1{
+	background-image:url(../img/1.jpg);
+}
+
+.slide2{
+	background-image:url(../img/2.jpg);
+}
+
+.slide3{
+	background-image:url(../img/3.jpg);
+}
+
+.slide4{
+	background-image:url(../img/4.jpg);
+}
+
+/*导航菜单*/
+.menu-box{
+	width:1196px;
+	height:78px;
+	top:0;
+	left:0;
+	background-color: #fff;
+	/*position:relative;*/
+	border:2px solid rgba(0,0,0,.2);
+
+}
+
+ .menu-content{
+	width:299px;
+	height:78px;
+	background-color: #fff;
+	float:left;
+	font-size: 24px;
+	text-align: center;
+	line-height: 78px;
+	border-radius: 5px;
+} 
+
+.active{
+	background:#ffcc00;
+	font-size: 36px;
+}
+
+
+
+
