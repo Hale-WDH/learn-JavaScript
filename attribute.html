@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>遍历属性和值</title>
+</head>
+<body>
+	<script>
+		var obj = {a:1,b:2,c:3,d:6};
+		for(var s in obj){
+			//遍历属性
+			alert(s); //a,b,c,d
+			//遍历属性值
+			alert(obj[s]);//1,2,3,6
+		}
+	</script>
+</body>
+</html>
