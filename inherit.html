@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>类继承</title>
+</head>
+<body>
+	<script>
+	function Person(name){
+     	this.name = name;
+     	this.say = function(){
+          	alert('My name is '+this.name);
+    	}
+    }
+	function F2E(name,id){
+     	Person.call(this,name); //apply()方式改成Person.apply(this,new Array(	name));
+     	this.id = id;
+     	this.showId = function(){
+          	alert('Good morning,Sir,My work number is '+this.id);
+     	}
+	}
+	var wdh = new F2E('wdh',9527);
+	wdh.say();
+	wdh.showId();
+	</script>
+</body>
+</html>
