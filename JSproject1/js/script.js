@@ -24,8 +24,6 @@ function slideImg(){
 			if(index >= len){
 				index = 0;
 			}
-			// //切换图片
-			// changeImg();
 		},1000);
 	}
 	//自动在banner上触发鼠标离开事件
@@ -37,11 +35,6 @@ function slideImg(){
 		menubox[d].onclick = function(){
 			//改变index为当前索引
 			index=this.id;
-			//遍历所有menubox，将其className设为"menu-content",并将当前menubox的className设为"menu-content active"
-			for(var a = 0;a<len;a++){
-				menubox[a].className="menu-content";
-			}
-			this.className="menu-content active";
 			//调用changeImg,实现切换图片
 			changeImg();
 		}
@@ -51,14 +44,12 @@ function slideImg(){
 //切换图片
 function changeImg(){
 	//遍历所有menubox，将其className设为"menu-content",并将当前menubox的className设为"menu-content active"
+	//遍历所有的div,将其影藏，再将相应的div显示
 	for(var a = 0;a<len;a++){
-				menubox[a].className="menu-content";
+		menubox[a].className="menu-content";
+		pics[a].style.display = "none";
 	}
 	menubox[index].className="menu-content active";
-	//遍历所有的div,将其影藏，再将相应的div显示
-	for(var i=0;i<len;i++){
-       pics[i].style.display = "none";
-   }
 	pics[index].style.display = 'block';
 }
 
