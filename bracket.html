@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+	<input type="button" value="开始">
+	<input type="button" value="结束">
+	<script>
+		var startBtn=document.getElementsByTagName("input")[0];
+		var endBtn=document.getElementsByTagName("input")[1];
+		function start(){
+			alert("确定开始么？");
+			this.style.backgroundColor="green";
+		}
+		function end(){
+			alert("确定结束么？");
+			this.style.backgroundColor="yellow";
+		}	
+		startBtn.onclick=start;
+		endBtn.onclick=end();
+	</script>
+</body>
+</html>
